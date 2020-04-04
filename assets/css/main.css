@@ -7,6 +7,20 @@ html{
 :root{
 
 }
+
+#about-me, #contact, #portfolio{
+    scroll-snap-type: y proximity;
+}
+
+
+/* the dock element will snap the nav to it when it gets close in proximity  */
+dock {
+    display: block;
+    width:100%;
+    height:64px;
+    scroll-snap-align: start;
+    background-color: slategray;
+}
 /* ---------------------------------- INTRO ----------------------------------------------------- */
 .font-audiowide{
     font-family: 'Audiowide', cursive;
@@ -16,7 +30,6 @@ html{
     margin: 0;
     padding:10px;
     font-family: 'Audiowide', cursive;
-    color:white;
     color:#ffc107;
 }
 .last-name{
@@ -32,7 +45,7 @@ html{
 .shade{
     padding-top:40px;
     width:50%;
-    height:100%;
+    height:100vh;
     background-color: rgba(0,0,0,0.6);
 }
 
@@ -69,10 +82,10 @@ nav{
 /* ----------------------------------------------------- ABOUT ME -------------------------------------------------------- */
   
 #about-me{
-    padding-top:0;
+    padding-top:0px;
     margin-top:-64px;
     width:100%;
-    height:300px;
+    height:100vh;
     background-color:teal;
 }
 .v-tabs{
@@ -83,10 +96,15 @@ nav{
 }
 
 .v-tab{
-    width:100%;
+    width:fit-content;
     height:auto;
-    margin:10px;
+    margin:10px 0;
+    margin-left:5px;
     padding:10px 5px;
+}
+.align {
+    display: flex;
+    align-items: center;
 }
 
 .v-tab:hover{
@@ -96,21 +114,25 @@ nav{
 
 }
 
-.pillar{
+.col.pillar{
     margin:0;
-    padding:0;
+    padding:0px 0.5rem;
     width:100%;
     height:100%;
     background-color:slateblue;
 }
 
 .tab-container{
-    margin:0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin:0 0;
     padding:0;
     width: 100%;
     height: 100%;
     background-color: slategray;
 }
+
 
 
 .tab-break{
@@ -119,30 +141,34 @@ nav{
     background-color: beige;
 }
 
-.about-row{
-    margin-top: 64px;
-    width:100%;
-    height:100%;
-}
 
 /* --------------------------------------------------- PORTFOLIO ---------------------------------------------------------- */
 #portfolio{
+    margin: 0;
+    padding-top:64px;
     width:100%;
-    height:300px;
+    height:100vh;
     background-color:beige;
+}
+
+.portfolio-header {
+    margin:0;
+    padding:0;
 }
 /* --------------------------------------------------- CONTACT ------------------------------------------------------------- */
 #contact{
+    margin: 0;
+    padding-top: 64px;
     width:100%;
-    height:300px;
+    height:100vh;
     background-color:teal;
 }
-.arrow {
+#arrow {
     width:100%;
     height:0;
-    border-top:160px solid beige;
-    border-left:447.5px solid transparent;
-    border-right:447.5px solid transparent;
+    border-top:17vw solid beige;
+    border-left:50vw solid transparent;
+    border-right:50vw solid transparent;
 }
 
 footer{

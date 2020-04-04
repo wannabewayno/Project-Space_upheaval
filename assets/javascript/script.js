@@ -1,25 +1,20 @@
 
-document.body.onresize = dynamicSize;
-dynamicSize();
+document.body.onscroll = scrollSensitivity;
 
-function dynamicSize(){
+function scrollSensitivity(){
+    const docks = $("dock")
+    console.log(docks);
+    
+    const screenPos = document.body.getBoundingClientRect();
+    console.log(screenPos);
     const screenHeight = window.innerHeight;
+    const navEl = document.querySelector("nav")
+    const navHeight = navEl.clientHeight
+    const navPos = navEl.getBoundingClientRect();
+    console.log(navEl.clientHeight);
+    console.log(navPos);
+    console.log(navHeight);
     const screenWidth = window.innerWidth;
-    if (screenWidth < 850){
-        console.log(screenWidth);
-        console.log("Screen under 1100? :"+(screenWidth < 1100));
-        $("#about-me").css("height","auto");
-        $("#portfolio").css("height","auto");
-        $("#contact").css("height","auto");
-
-    } else if (screenWidth > 850) {
-        console.log(screenWidth);
-        console.log("Screen under 1100? :"+(screenWidth > 1100));
-        $("#about-me").css("height",screenHeight);
-        $("#portfolio").css("height",screenHeight);
-        $("#contact").css("height",screenHeight);
-    }
-    $("#first-impressions").css("height",screenHeight);
 }
 
 
