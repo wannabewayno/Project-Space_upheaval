@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 <body>
+    <!-- Cover Picture upon load -->
     <section id="first-impressions">
         <div class="shade">
             <h1 class="name">&ltWayne<span class="last-name"> Griffiths</span>/&gt</h1>
@@ -29,16 +30,16 @@
             <h4 class="title">Full-Stack Web Developer</h4>
         </div>
     </section>
-
+<!-- Navigation Bar -->
     <nav class="z-depth-0">
         <h3 class="nav-title">Project | Space</h3>
         <div class="link-container">
-            <a href="#about-me">Who?</a>
-            <a href="#portfolio">Why?</a>
-            <a href="#contact">How?</a>
+            <a href="#about-me" class="nav-link">About</a>
+            <a href="#portfolio" class="nav-link">Portfolio</a>
+            <a href="#contact" class="nav-link">Contact</a>
         </div>
     </nav>
-
+<!-- First section "about-me" -->
     <section id="about-me">
         
             <port>
@@ -47,19 +48,21 @@
         
         <div class="row">
             <div class="col s5">
-                <h5 class="design-principles">DesignPrinciples</h5>
-                 <!--Tabbed content  -->
-                <div class="vtab-container">
-                    <article id="design">
-                        This is a bio section!
-                        Some bulk to make up some serious meaty and juicy content yummmmy!
-                    </article>
-                    <article id="develop">
-                        Eintstien and stuff and all that jazz about the universe
-                    </article>
-                    <article id="deploy">
-                        OMG QUACK QUACK QUACK I'M A DUCK DERRRRRRRRRRRRR
-                    </article>
+                <div class="content-container">
+                     <!--Tabbed content  -->
+                    <div class="vtab-content-container">
+                        <article id="design">
+                            This is a bio section!
+                            Some bulk to make up some serious meaty and juicy content yummmmy!
+                        </article>
+                        <article id="develop">
+                            Eintstien and stuff and all that jazz about the universe
+                        </article>
+                        <article id="deploy">
+                            OMG QUACK QUACK QUACK I'M A DUCK DERRRRRRRRRRRRR
+                        </article>
+                    </div>
+                    <h5>Design Principles</h5>
                 </div>
             </div>
             <div class="pillar col s2">
@@ -95,8 +98,8 @@
                 </div>
             </div>
         </div>
-
     </section>
+    <!-- Second section "portfolio" -->
     <section id="portfolio">
         <port>
             <dock id="portfolio-dock"></dock>
@@ -109,7 +112,7 @@
                 <div class="featured-description">
                     <h5 class="title featured-title">Recipedia</h4>
                     <p class="featured-text">
-                        I used to be a winery restuarant manager and Recipedia allowed me to bring my passion for cooking and designing together as heavy hitters.
+                        Once I was a winery restuarant manager; Recipedia allowed me to bring my passion for cooking and designing together as heavy hitters.
                     </p>
                     <p class="featured-text">
                        Collaborating with two fellow foodies, we built an intuitive UI. 
@@ -192,7 +195,7 @@
             </div>
         </div>    
     </section>
-
+<!-- Third Section Contact -->
     <section id="contact">
         <port>
             <dock id="dock-contact"></dock>
@@ -211,7 +214,7 @@
             <button type="submit" id="submit-button" for="contact-container" class="z-depth-5">Send<i class="material-icons">send</i></button>
         </form>
         <footer>
-            <p>Built from scratch by Wayne with a little help from materialize</p>
+            <p>Built from scratch by Wayne and <i class="fa fa-coffee"></i></p>
         </footer>
     </section>
 
