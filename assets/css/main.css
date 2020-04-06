@@ -108,8 +108,21 @@ nav{
     position: sticky;
     top:0;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
+    align-items: flex-start;
+    align-content: space-between;
     z-index:2;
+    padding:10px;
+}
+nav>.nav-title {
+    font-family: 'Audiowide', cursive;
+    color:#ffc107;
+    padding: 5px;
+    margin: 0;
+    font-size: 30px;
+}
+.link-container{
+    
 }
 /* ----------------------------------------------------- ABOUT ME -------------------------------------------------------- */
   
@@ -239,7 +252,7 @@ nav{
         
     /* --------------------------------- other projects------------------------------------------ */
     .other-projects{
-        margin:0;
+        margin-top:20px;
         position: relative;
         display: flex;
         flex-direction: column;
