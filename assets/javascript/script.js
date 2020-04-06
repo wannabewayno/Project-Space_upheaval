@@ -3,6 +3,7 @@
 document.body.onscroll = scrollSensitivity;
 document.body.onresize = reSize;
 reSize();
+$(".tabs").tabs();
 
 // ------------------------- listeners -------------------------------------
 
@@ -36,6 +37,8 @@ $('#menu').click(function(){
         });
     }
 });
+
+$('#submit-button').click(clearForm);
 
 // ---------------------- global variables --------------------------------
 const snapProximity = 80; //pixels
@@ -114,4 +117,10 @@ function featuredHeader(){
     $(".featured-header").css("left",headerOffset);
     $('.featured-header').css("top",- 0.75*headerHeight)
     
+}
+
+function clearForm(){
+    $('#name').val('');
+    $('#email').val('');
+    $('#message').val('');
 }

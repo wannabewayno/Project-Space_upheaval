@@ -14,6 +14,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Audiowide|Kelly+Slab|Prosto+One|Righteous&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&display=swap" rel="stylesheet">
     <!-- Custom css -->
     <link rel="stylesheet" href="./assets/css/scroll.css">
     <link rel="stylesheet" href="./assets/css/hamburgers.css">
@@ -45,82 +46,94 @@
             <port>
                 <dock id="about-me-dock" class=""></dock>
             </port>
-        
-        <div class="row">
-            <div class="col s5">
-                <div class="content-container">
-                     <!--Tabbed content  -->
-                    <div class="vtab-content-container">
-                        <article id="design">
-                          placeholder
-                        </article>
-                        <article id="develop">
-                            more placeholder
-                        </article>
-                        <article id="deploy">
-                           placeholder
-                        </article>
-                    </div>
-                    <h5 class="bottom">Design Principles</h5>
-                </div>
-            </div>
-            <div class="pillar col s2">
-                <div class="tab-container z-depth-2">
+            <div class="container">
+                <div class="row">
                     <!-- Tabs -->
-                    <ul class="v-tabs">
-                        <li class="v-tab active-vtab align" tab-ref="#bio">About me<i class="material-icons">arrow_forward</i></li>
-                        <li class="v-tab align" tab-ref="#philosophy">design philosophy <i class="material-icons">arrow_forward</i></li>
-                        <li class="v-tab align" tab-ref="#ducks">interests <i class="material-icons">arrow_forward</i></li>
-                    </ul>
-                    <div class="tab-break"></div>
-                    <ul class="v-tabs">
-                        <li class="v-tab active-vtab align" tab-ref="#design"><i class="material-icons">arrow_back</i>Design</li>
-                        <li class="v-tab align" tab-ref="#develop"><i class="material-icons">arrow_back</i>Develop</li>
-                        <li class="v-tab align" tab-ref="#deploy"><i class="material-icons">arrow_back</i>Deploy </li>
-                    </ul>
+                    <div class="col s12">
+                      <ul class="tabs z-depth-3">
+                        <li class="tab col s4"><a href="#design-philosophy">Design Philosophy</a></li>
+                        <li class="tab col s4"><a class="active" href="#developer">Developer</a></li>
+                        <li class="tab col s4"><a href="#what-else">What else?</a></li>
+                      </ul>
+                    </div>
+                    <!-- Tab content -->
+                    <div id="design-philosophy" class="col s12">
+                        <div class="tab-content">
+                            <h5>
+                                Design Philosophy
+                            </h5>
+                            <p>
+                                <em>form or function?</em>
+                            </p>
+                            <p>
+                                Generally speaking, for items of the same function, form wins out. When items have an unknown function, form wins out.
+                                Form also alludes to having good function.  
+                            </p>
+                            <p>
+                                My philosophy, in general; putting form over function. The product still has to function, but the form seperates it from the rest.
+                                Keep elements few and nessecary.
+                            </p>
+                            <blockquote class="z-depth-1">
+                                just like a good pizza; you don't need 17 toppings, just 4 good quality ones.
+                            </blockquote>
+                            <p>
+                                All of us, no matter how humble; have a natural tendency to 'shiny things'. 
+                                Big things are all built from small things, so master the small things and the big things will naturaly fall in place.
+                            </p>
+                            <p>
+                                These principles are at my core, bringing them to my personal design principles. I believe in building a clean interior and exterioir product. 
+                                If there's cables, they're colour coded, crimped and sheathed.
+                                If it's code, it's readable and well commented. If you spend this much detail under the hood, the outside will be a reflection of this too.
+                            </p>
+                            <blockquote class="z-depth-1">
+                                The final product is not simply an end justified by any means. It's when the whole is worth more than the sum of it's parts.
+                            </blockquote>
+                        </div>
+                        </div>
+                    <div id="developer" class="col s12">
+                        <div class="tab-content">
+                            <div class="row">
+                                <h5>As a Developer</h5>
+                            </div>
+                            <p>
+                                
+                            </p>
+                            <div class="row">
+                                <div class="col s12 m6">
+                                    <ul class="collection with-header">
+                                        <li class="collection-header"><h4>Languages I speak</h4></li>
+                                        <li class="collection-item">HTML</li>
+                                        <li class="collection-item">CSS</li>
+                                        <li class="collection-item">JavaScript</li>
+                                        <li class="collection-item">Node.js</li>
+                                      </ul>
+                                </div>
+                                <div class="col s12 m6">
+                                    <ul class="collection with-header">
+                                        <li class="collection-header"><h4>Dev tools I know</h4></li>
+                                        <li class="collection-item">Github</li>
+                                        <li class="collection-item">BootStrap</li>
+                                        <li class="collection-item">Materialize</li>
+                                        <li class="collection-item"></li>
+                                      </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="what-else" class="col s12">
+                        <div class="tab-content">
+                            <h5>What else?</h5>
+                            <p>
+                                My undergrad was in Nanotechnology, I have a keen interest in rewnewable energy and brining clever design to all aspects of my life.
+                            </p>
+                            <p>
+                                
+                            </p>
+                            <img src="assets/images/about me/First 4k render.jpg" class="responsive-img">
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col s5">
-                <h5>About me</h5>
-                <!-- Tabbed content -->
-                <div class="vtab-container">
-                    <article id="bio">
-                       placeholder
-                    </article>
-                    <article id="philosophy">
-                        <p class="font-italic">
-                            form or function?
-                        </p>
-                        <p>
-                            Generally speaking, for items of the same function, form wins out. When items have an unknown function, form wins out.
-                            Form also alludes to having good function.  
-                        </p>
-                        <p>
-                            My philosophy, in general; putting form over function. At the end of the day the product still has to function, what will make it stand out is how it's presented.
-                            Keep elements few and nessecary.
-                        </p>
-                        <blockquote class="blockquote">
-                            just like a good pizza; you don't need 17 toppings, just 4 good quality ones.
-                        </blockquote>
-                        <p>
-                            All of us, no matter how humble; have a natural tendency to 'shiny things'. 
-                            Big things are all built from small things, so master the small things and the big things will naturaly fall in place.
-                        </p>
-                        <p>
-                            These principles are at my core, bringing them to my personal design principles. I believe in building a clean interior and exterioir product. 
-                            If there's cables, they're colour coded, crimped and sheathed.
-                            If it's code, it's readable and well commented. If you spend this much detail under the hood, the outside will be a reflection of this too.
-                        </p>
-                        <blockquote class="blockquote">
-                            The final product is not simply an end justified by any means. It's when the whole is worth more than the sum of it's parts.
-                        </blockquote>
-                    </article>
-                    <article id="ducks">
-                       placeholder
-                    </article>
-                </div>
-            </div>
-        </div>
     </section>
     <!-- Second section "portfolio" -->
     <section id="portfolio">
@@ -262,8 +275,6 @@
     <!-- Cusotm js-->
         <!-- general -->
         <script src="./assets/javascript/script.js"></script>
-        <!-- vertical tabs -->
-        <script src="./assets/javascript/vertical-tabs.js"></script>
 </body>
 </html>
 
