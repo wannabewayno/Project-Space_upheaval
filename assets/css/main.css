@@ -617,16 +617,18 @@ footer>p{
 /* ----------------------------------- MEDIA QUERIES -------------------------------------- */
 
 @media (min-width: 576px) {
-  
-}
-@media (min-width: 768px) {
-
-    
-}
-@media (min-width: 992px) {
     #contact, #about-me, #portfolio{
         height:auto;
     }
+    
+}
+@media (min-width: 768px) {
+    #contact, #about-me, #portfolio{
+        height:auto;
+    }
+    
+}
+@media (min-width: 992px) {
     
 }
   
