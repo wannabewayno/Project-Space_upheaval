@@ -1,25 +1,56 @@
-/* Font famillies */
+/* ------------------ scroll bar -------------------------------------- */
 
+.scrollbar-measure {
+    width: 100px;
+    height: 100px;
+    overflow: scroll;
+    position: absolute;
+    top: -9999px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: white; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: black; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+/* --------------------- scroll behaviour -------------------------------- */
 html{
     scroll-behavior: smooth;
-}
-
-:root{
-
-}
-
-#about-me, #contact, #portfolio{
     scroll-snap-type: y proximity;
 }
 
 
-/* the dock element will snap the nav to it when it gets close in proximity  */
+/* the port element will snap the nav to it when it gets close in proximity  */
+
+port {
+    margin:0;
+    padding:0;
+    display: block;
+    scroll-snap-align:none;
+    scroll-snap-stop:normal;
+    position: relative;
+}
+/*  the dock element contains the nav on full-width screens, it's height is dynamicaly set with javascript to the hieght of the nav */
 dock {
+    position: relative;
     display: block;
     width:100%;
     height:64px;
-    scroll-snap-align: start;
-    background-color: slategray;
 }
 /* ---------------------------------- INTRO ----------------------------------------------------- */
 .font-audiowide{
@@ -78,16 +109,23 @@ nav{
     top:0;
     display: flex;
     justify-content: flex-start;
+    z-index:2;
 }
 /* ----------------------------------------------------- ABOUT ME -------------------------------------------------------- */
   
 #about-me{
+    position: relative;
     padding-top:0px;
     margin-top:-64px;
     width:100%;
     height:100vh;
     background-color:teal;
 }
+#about-me-dock{
+    background-color: slategrey;
+}
+
+
 .v-tabs{
     margin:0;
     padding:0;
@@ -140,41 +178,407 @@ nav{
     height:30px;
     background-color: beige;
 }
-
+#about-me>.row{
+    height: 100%;
+}
 
 /* --------------------------------------------------- PORTFOLIO ---------------------------------------------------------- */
-#portfolio{
-    margin: 0;
-    padding-top:64px;
-    width:100%;
-    height:100vh;
-    background-color:beige;
-}
+    #portfolio{
+        position: relative;
+        margin: 0;
+        padding-top:0;
+        width:100%;
+        height:100vh;
+        background-color:beige;
+    }
+    #portfolio-dock{
+        background-color: beige;
+    }
+    #portfolio>h4{
+        text-align: center;
+    }
+    /* ------------------------------------------ featured work ---------------------------------------------------------------- */
+    .featured-wrapper{
+        position: relative;
 
-.portfolio-header {
-    margin:0;
-    padding:0;
-}
+    }
+        .featured-header{
+            position: absolute;
+            background-color: beige;
+            border-radius: 15px;
+            z-index:1;
+        }
+
+        .featured-work {
+            position:relative;
+            display: flex;
+            justify-content: left;
+            background-color: rgb(147,133,107);
+            overflow: hidden;
+            margin: 30px 0px 0px 0px;
+            width:100%;
+            height:250px;
+
+        }
+            .featured-image{
+                width:50%;
+                height:auto;
+            }
+            .featured-description{
+                margin-left: -1px;
+                background-color: rgb(147,133,107);
+            }
+            .featured-title{
+                padding:5px;
+                margin-top: 20px;
+            }
+            .featured-text{
+                padding:5px;
+                margin-bottom: 5px;
+            }
+        
+    /* --------------------------------- other projects------------------------------------------ */
+    .other-projects{
+        margin:0;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+    }
+        .project-thumbnails{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            flex-wrap: wrap;
+        }
+
+            figure{
+                overflow: hidden;
+                position: relative;
+                border-radius: 10px;
+                margin:15px;
+                width:200px;
+                height:112.5px;
+            }
+            figcaption{
+                text-align: center;
+                position:absolute;
+                top: 0;
+                padding:10px;
+                opacity: 1;
+            }
+            .overlay{
+                top:0;
+                width: 100%;
+                height: 100%;
+                background-color:rgba(133,133,133,0.4);
+                position: absolute;
+                z-index:1;
+            }
+            figure>img{
+                width:100%;
+                height: auto;
+            }
+        /* --------------------------- classes for the displayed (un-hovered) content --------------------------------------*/
+            .display-content{
+                width:100%;
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+                z-index:2;
+            }
+                /* ------------------------------------- individual classes for project cards ------------------------------------------------------- */
+                .ssh{
+                    color: black;
+                    margin-top: 5px;
+                    font-size: 40px;
+                    padding:5px;
+                    position: relative;
+                    
+                }
+                    .ssh>h5{
+                        margin:0;
+                        font-size: 20px;
+                    }
+
+                .nine-five{
+                    margin-top: 25px;
+                    color:#ffc107;
+                    font-size: 25px;
+                    padding:5px;
+                    position: relative;
+                }
+
+                .quizinc{
+                    font-size: 25px;
+                    color:skyblue;
+                    border-radius: 10px;
+                    margin-top: 30px;
+                }
+                .globe-report{
+                    font-size: 25px;
+                    padding:5px 10px;
+                }
+                    .fa-globe-asia{
+                        font-size: 15px;
+                    }
+            /* ----------------------------------- classes hovered content, more information is presented ----------------------- */
+            .hover-content{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width:100%;
+                opacity: 0;
+                z-index:2;
+            }
+            /* ------------------------------------------ link button --------------------------------------------- */
+                .project-link{
+                    position: relative;
+                    width: fit-content;
+                    color: white;
+                    border:2px solid white;
+                    padding:6px;
+                    margin-top:5px;
+                    border-radius: 15px;
+                    background-color: transparent;
+                    transition: 400ms ease-in-out;
+                }
+                    .fa-chevron-right{
+                        margin-left:5px;
+                    }
+                .project-link:hover, .project-link:focus{
+                    background-color: white;
+                    color: black;
+                }
+            
+            /* ----------------------------- Hover conditions ------------------------------------------ */
+            img, .overlay,.display-content, .hover-content{
+                transition:all 400ms ease-in-out;
+            }
+            figure:hover img {
+                transform: scale(1.5);
+            }
+            figure:hover .overlay{
+                background-color: rgba(133,133,133,1);
+            }
+            figure:hover .display-content {
+                opacity: 0;
+                transform: scale(1.5);
+            }
+            figure:hover .hover-content {
+                opacity: 1;
+            }
 /* --------------------------------------------------- CONTACT ------------------------------------------------------------- */
 #contact{
-    margin: 0;
-    padding-top: 64px;
+    position: relative;
+    margin:0;
+    padding:0;
     width:100%;
     height:100vh;
     background-color:teal;
 }
+#dock-contact{
+    background-color: beige;
+}
+.contact-container{
+    margin-top:70px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #arrow {
-    width:100%;
-    height:0;
-    border-top:17vw solid beige;
+    position:absolute;
+    width:0px;
+    height:0px;
+    border-top:10vw solid beige;
     border-left:50vw solid transparent;
     border-right:50vw solid transparent;
 }
 
-footer{
+#submit-button{
+    margin:10px;
+    align-self:center;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    background-color: transparent;
+    padding:5px 15px;
+    border:3px solid slategrey;
+    transition: 400ms ease-in-out;
+}
+
+#submit-button:hover{
+    background-color: slategray;
+}
+
+/* ----------------------------------------------------- email transform -------------------------------------------- */
+#email, #name {
+    top:60px;
+    position: absolute;
+    border:2px solid slategrey;
+    width:222px;
+    height:0px;
+    transition: 1000ms ease-in-out;
+    border-radius: 5px;
+}
+#email {
+    left:-10px;
+    transform: rotateZ(30deg);
+}
+#name{
+    right:-10px;
+    transform:rotateZ(-30deg);
+
+}
+#message{
+    overflow: auto;
+    position: relative;
+    border: 4px solid slategray;
+    border-radius:15px;
     width:100%;
-    height: 25%;
+    height:100%;
+    outline: none;
+    transition: 1000ms ease-in-out;
+    resize:none;
+    padding:10px;
+}
+#message::placeholder, #name::placeholder, #email::placeholder{
+    transition: 1000ms ease-in-out;
+    opacity: 0;
+}
+
+#form-container{
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 15px;
+    width:400px;
+    height:200px;
+    background-color: #F0EAD6;
+}
+
+#form-container:hover #name, #form-container:focus-within #name, #form-container:hover #email, #form-container:focus-within #email{
+    position: absolute;
+    margin:10px;
+    top:0px;
+    width:180px;
+    height:25px;
+    transform: rotateZ(0deg);
+    border:0;
+    border-bottom:1px solid slategray;
+    border-radius: 0;
+}
+
+#form-container:hover #name, #form-container:focus-within #name{
+    right:0px;
+}
+
+#form-container:hover #email, #form-container:focus-within #email{
+    left:0px;
+}
+
+#form-container:hover #message, #form-container:focus-within #message {
+    margin-top:40px;
+    height: 75%;
+    border:1px solid slategray;
+    border-radius: 10px;    
+}
+#form-container:hover #message::placeholder, #form-container:focus-within #message::placeholder, #form-container:focus-within #name::placeholder,  #form-container:hover #name::placeholder, #form-container:focus-within #email::placeholder,  #form-container:hover #email::placeholder{
+    color: slategray;
+    opacity: 1;
+}
+
+#form-container:hover ,#form-container:focus-within{
+    padding:10px;
+}
+
+/* ------------------------------------------------- footer ----------------------------------------------------- */
+footer{
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    bottom:0;
+    position: absolute;
+    width:100%;
+    height: 75px;
     background-color: cadetblue;
+}
+/* ------------------------------------------------------ pop-up icons ------------------------------------- */
+.burger-box, .arc-container{
+    position: fixed;
+    bottom:0;
+    right:0;
+    padding-left:11px;
+    padding-top:17px;
+    width:60px;
+    height:60px;
+    background-color: rgb(0,0,0,0.2);
+    border-radius: 50%;
+    margin-bottom:10px;
+    margin-right:10px;
+    z-index:2;
+} 
+.arc-container{
+    padding:0;
+    width:240px;
+    height:240px;
+    background-color: transparent;
+    margin-bottom:-80px;
+    margin-right:-80px;
+    z-index:1;
+    transition:1000ms ease-in-out;
+    transform: rotateZ(180deg);
+}
+
+.linkedin, .github, .pdf{
+    position: absolute;
+    font-size: 55px;
+    color:black;
+    transform: rotateZ(-180deg);
+    transition:1000ms ease-in-out;
+}
+
+.linkedin{
+    top:0;
+    left:97px;
+}
+.pdf{
+    top:97px;
+}
+.github{
+    top:28px;
+    left:28px;
+}
+
+.show {
+    transform: rotateZ(0deg);
+}
+
+.newTime{
+    transition: 300ms;
+}
+
+.pdf:hover, .github:hover, .linkedin:hover{
+    color:beige;
+    transform:scale(1.1)
+}
+
+#menu{
+    padding:0;
+    margin:0;
+}
+
+#menu:focus, #menu:active, .is-active, .is-active:focus, .is-active:active{
+    background-color: transparent;
 }
 
 /* ----------------------------------- MEDIA QUERIES -------------------------------------- */
@@ -186,6 +590,7 @@ footer{
     
 }
 @media (min-width: 992px) {
+}
   
 @media (min-width: 1200px) {
    
